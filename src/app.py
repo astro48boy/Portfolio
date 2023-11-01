@@ -13,11 +13,11 @@ app.mount("/assets", StaticFiles(directory="../templates/assets"), name="assets"
 app.mount("/static", StaticFiles(directory="../templates/static"), name="static")
 
 
+# @app.get("/")
+# def root(request: Request):
+#     return templates.TemplateResponse("home.html", {"request": request})
+
+
 @app.get("/")
-def root(request: Request):
-    return templates.TemplateResponse("home.html", {"request": request})
-
-
-@app.get("/index")
 def root(request: Request):
     return templates.TemplateResponse("index.html", {"request": request})
